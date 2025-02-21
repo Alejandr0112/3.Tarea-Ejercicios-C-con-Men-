@@ -7,6 +7,7 @@ void ejercicio3();
 void ejercicio4();
 void ejercicio5();
 void ejercicio6();
+void ejercicio7();
 
 int main() {
     int opcion;
@@ -19,6 +20,7 @@ int main() {
         cout << "4. Determinar si un anio es bisiesto.\n";
         cout << "5. Determinar si una letra es vocal o consonante.\n";
         cout << "6. Verificar si un numero es primo.\n";
+        cout << "7. Verificar si un anio es un anio de nacimiento valido.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -41,6 +43,9 @@ int main() {
             break;
             case 6:
                 ejercicio6();
+            break;
+            case 7:
+                ejercicio7();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -143,5 +148,19 @@ void ejercicio6() {
         cout << "El numero es primo.\n";
     } else {
         cout << "El numero no es primo.\n";
+    }
+}
+
+void ejercicio7() {
+    int anio;
+    cout << "\nIngrese un anio de nacimiento: ";
+    cin >> anio;
+
+    int anioActual = 2025;
+
+    if (anio > 1900 && anio < anioActual) {
+        cout << "El anio ingresado es un anio de nacimiento valido.\n";
+    } else {
+        cout << "El anio ingresado no es valido.\n";
     }
 }
