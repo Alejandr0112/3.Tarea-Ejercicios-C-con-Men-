@@ -12,6 +12,7 @@ void ejercicio8();
 void ejercicio9();
 void ejercicio10();
 void ejercicio11();
+void ejercicio12();
 
 int main() {
     int opcion;
@@ -29,6 +30,7 @@ int main() {
         cout << "9. Determinar la calificacion de un estudiante.\n";
         cout << "10. Calcular el precio despues de un descuento.\n";
         cout << "11. Imprimir los numeros del 1 al 20.\n";
+        cout << "12. Imprimir todos los numeros desde 1 hasta un numero ingresado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -66,6 +68,10 @@ int main() {
             break;
             case 11:
                 ejercicio11();
+            break;
+            case 12:
+                ejercicio12();
+            break;
             case 0:
                 cout << "Saliendo del programa.\n";
             break;
@@ -230,6 +236,18 @@ void ejercicio10() {
 void ejercicio11() {
     int i = 1;
     while (i <= 20) {
+        cout << i << " ";
+        i++;
+    }
+    cout << "\n";
+}
+
+void ejercicio12() {
+    int numero, i = 1;
+    cout << "\nIngrese un numero: ";
+    cin >> numero;
+
+    while (i <= numero) {
         cout << i << " ";
         i++;
     }
