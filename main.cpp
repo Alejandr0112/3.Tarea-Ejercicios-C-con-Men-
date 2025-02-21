@@ -13,6 +13,7 @@ void ejercicio9();
 void ejercicio10();
 void ejercicio11();
 void ejercicio12();
+void ejercicio13();
 
 int main() {
     int opcion;
@@ -31,6 +32,7 @@ int main() {
         cout << "10. Calcular el precio despues de un descuento.\n";
         cout << "11. Imprimir los numeros del 1 al 20.\n";
         cout << "12. Imprimir todos los numeros desde 1 hasta un numero ingresado.\n";
+        cout << "13. Sumar numeros positivos hasta que se ingrese un numero negativo.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -71,6 +73,9 @@ int main() {
             break;
             case 12:
                 ejercicio12();
+            break;
+            case 13:
+                ejercicio13();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -252,4 +257,19 @@ void ejercicio12() {
         i++;
     }
     cout << "\n";
+}
+
+void ejercicio13() {
+    int numero, suma = 0;
+    cout << "\nIngrese numeros positivos (ingrese un numero negativo para detener):\n";
+
+    while (true) {
+        cin >> numero;
+        if (numero < 0) {
+            break;
+        }
+        suma += numero;
+    }
+
+    cout << "La suma de los numeros ingresados es: " << suma << "\n";
 }
