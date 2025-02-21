@@ -14,6 +14,7 @@ void ejercicio10();
 void ejercicio11();
 void ejercicio12();
 void ejercicio13();
+void ejercicio14();
 
 int main() {
     int opcion;
@@ -33,6 +34,7 @@ int main() {
         cout << "11. Imprimir los numeros del 1 al 20.\n";
         cout << "12. Imprimir todos los numeros desde 1 hasta un numero ingresado.\n";
         cout << "13. Sumar numeros positivos hasta que se ingrese un numero negativo.\n";
+        cout << "14. Generar la secuencia de Fibonacci hasta un numero ingresado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -76,6 +78,9 @@ int main() {
             break;
             case 13:
                 ejercicio13();
+            break;
+            case 14:
+                ejercicio14();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -272,4 +277,19 @@ void ejercicio13() {
     }
 
     cout << "La suma de los numeros ingresados es: " << suma << "\n";
+}
+
+void ejercicio14() {
+    int limite, a = 0, b = 1, c;
+    cout << "\nIngrese un numero para generar la secuencia de Fibonacci: ";
+    cin >> limite;
+
+    cout << "Secuencia de Fibonacci: ";
+    while (a <= limite) {
+        cout << a << " ";
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    cout << "\n";
 }
