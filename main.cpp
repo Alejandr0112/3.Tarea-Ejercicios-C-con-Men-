@@ -4,6 +4,7 @@ using namespace std;
 void ejercicio1();
 void ejercicio2();
 void ejercicio3();
+void ejercicio4();
 
 int main() {
     int opcion;
@@ -13,6 +14,7 @@ int main() {
         cout << "1. Determinar si un numero es positivo, negativo o cero.\n";
         cout << "2. Verificar si un numero es par o impar.\n";
         cout << "3. Mostrar el mayor de tres numeros.\n";
+        cout << "4. Determinar si un anio es bisiesto.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -26,6 +28,9 @@ int main() {
             break;
             case 3:
                 ejercicio3();
+            break;
+            case 4:
+                ejercicio4();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -77,4 +82,16 @@ void ejercicio3() {
     }
 
     cout << "El mayor de los tres numeros es: " << mayor << "\n";
+}
+
+void ejercicio4() {
+    int anio;
+    cout << "\nIngrese un anio: ";
+    cin >> anio;
+
+    if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+        cout << "El anio " << anio << " es bisiesto.\n";
+    } else {
+        cout << "El anio " << anio << " no es bisiesto.\n";
+    }
 }
