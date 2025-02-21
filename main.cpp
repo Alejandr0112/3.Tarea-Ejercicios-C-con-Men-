@@ -3,6 +3,7 @@ using namespace std;
 
 void ejercicio1();
 void ejercicio2();
+void ejercicio3();
 
 int main() {
     int opcion;
@@ -11,6 +12,7 @@ int main() {
         cout << "\n--- Menu de Ejercicios ---\n";
         cout << "1. Determinar si un numero es positivo, negativo o cero.\n";
         cout << "2. Verificar si un numero es par o impar.\n";
+        cout << "3. Mostrar el mayor de tres numeros.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -21,6 +23,9 @@ int main() {
             break;
             case 2:
                 ejercicio2();
+            break;
+            case 3:
+                ejercicio3();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -57,4 +62,19 @@ void ejercicio2() {
     } else {
         cout << "El numero es impar.\n";
     }
+}
+void ejercicio3() {
+    int num1, num2, num3;
+    cout << "\nIngrese tres numeros separados por espacio: ";
+    cin >> num1 >> num2 >> num3;
+
+    int mayor = num1;
+    if (num2 > mayor) {
+        mayor = num2;
+    }
+    if (num3 > mayor) {
+        mayor = num3;
+    }
+
+    cout << "El mayor de los tres numeros es: " << mayor << "\n";
 }
