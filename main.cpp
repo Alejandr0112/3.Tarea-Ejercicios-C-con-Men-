@@ -6,6 +6,7 @@ void ejercicio2();
 void ejercicio3();
 void ejercicio4();
 void ejercicio5();
+void ejercicio6();
 
 int main() {
     int opcion;
@@ -17,6 +18,7 @@ int main() {
         cout << "3. Mostrar el mayor de tres numeros.\n";
         cout << "4. Determinar si un anio es bisiesto.\n";
         cout << "5. Determinar si una letra es vocal o consonante.\n";
+        cout << "6. Verificar si un numero es primo.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -36,6 +38,9 @@ int main() {
             break;
             case 5:
                 ejercicio5();
+            break;
+            case 6:
+                ejercicio6();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -112,6 +117,31 @@ void ejercicio5() {
     } else if (isalpha(letra)) {
         cout << "La letra es una consonante.\n";
     } else {
-        cout << "No ingresó una letra válida.\n";
+        cout << "No ingresaste una letra valida.\n";
+    }
+}
+
+void ejercicio6() {
+    int numero;
+    cout << "\nIngrese un numero: ";
+    cin >> numero;
+
+    if (numero <= 1) {
+        cout << "El numero no es primo.\n";
+        return;
+    }
+
+    bool esPrimo = true;
+    for (int i = 2; i <= numero / 2; ++i) {
+        if (numero % i == 0) {
+            esPrimo = false;
+            break;
+        }
+    }
+
+    if (esPrimo) {
+        cout << "El numero es primo.\n";
+    } else {
+        cout << "El numero no es primo.\n";
     }
 }
