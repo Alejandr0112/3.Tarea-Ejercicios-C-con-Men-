@@ -5,6 +5,7 @@ void ejercicio1();
 void ejercicio2();
 void ejercicio3();
 void ejercicio4();
+void ejercicio5();
 
 int main() {
     int opcion;
@@ -15,6 +16,7 @@ int main() {
         cout << "2. Verificar si un numero es par o impar.\n";
         cout << "3. Mostrar el mayor de tres numeros.\n";
         cout << "4. Determinar si un anio es bisiesto.\n";
+        cout << "5. Determinar si una letra es vocal o consonante.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -31,6 +33,9 @@ int main() {
             break;
             case 4:
                 ejercicio4();
+            break;
+            case 5:
+                ejercicio5();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -93,5 +98,20 @@ void ejercicio4() {
         cout << "El anio " << anio << " es bisiesto.\n";
     } else {
         cout << "El anio " << anio << " no es bisiesto.\n";
+    }
+}
+
+void ejercicio5() {
+    char letra;
+    cout << "\nIngrese una letra: ";
+    cin >> letra;
+
+    letra = tolower(letra);
+    if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+        cout << "La letra es una vocal.\n";
+    } else if (isalpha(letra)) {
+        cout << "La letra es una consonante.\n";
+    } else {
+        cout << "No ingresó una letra válida.\n";
     }
 }
