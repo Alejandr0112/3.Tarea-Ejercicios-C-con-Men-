@@ -8,6 +8,7 @@ void ejercicio4();
 void ejercicio5();
 void ejercicio6();
 void ejercicio7();
+void ejercicio8();
 
 int main() {
     int opcion;
@@ -21,6 +22,7 @@ int main() {
         cout << "5. Determinar si una letra es vocal o consonante.\n";
         cout << "6. Verificar si un numero es primo.\n";
         cout << "7. Verificar si un anio es un anio de nacimiento valido.\n";
+        cout << "8. Determinar si un numero es multiplo de 5 y de 7.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -46,6 +48,9 @@ int main() {
             break;
             case 7:
                 ejercicio7();
+            break;
+            case 8:
+                ejercicio8();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -162,5 +167,17 @@ void ejercicio7() {
         cout << "El anio ingresado es un anio de nacimiento valido.\n";
     } else {
         cout << "El anio ingresado no es valido.\n";
+    }
+}
+
+void ejercicio8() {
+    int numero;
+    cout << "\nIngrese un numero: ";
+    cin >> numero;
+
+    if (numero % 5 == 0 && numero % 7 == 0) {
+        cout << "El numero es multiplo de 5 y de 7.\n";
+    } else {
+        cout << "El numero no es multiplo de 5 y de 7.\n";
     }
 }
