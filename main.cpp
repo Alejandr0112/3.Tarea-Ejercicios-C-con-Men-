@@ -9,6 +9,7 @@ void ejercicio5();
 void ejercicio6();
 void ejercicio7();
 void ejercicio8();
+void ejercicio9();
 
 int main() {
     int opcion;
@@ -23,6 +24,7 @@ int main() {
         cout << "6. Verificar si un numero es primo.\n";
         cout << "7. Verificar si un anio es un anio de nacimiento valido.\n";
         cout << "8. Determinar si un numero es multiplo de 5 y de 7.\n";
+        cout << "9. Determinar la calificacion de un estudiante.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -51,6 +53,9 @@ int main() {
             break;
             case 8:
                 ejercicio8();
+            break;
+            case 9:
+                ejercicio9();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -179,5 +184,25 @@ void ejercicio8() {
         cout << "El numero es multiplo de 5 y de 7.\n";
     } else {
         cout << "El numero no es multiplo de 5 y de 7.\n";
+    }
+}
+
+void ejercicio9() {
+    int calificacion;
+    cout << "\nIngrese la calificacion (0-100): ";
+    cin >> calificacion;
+
+    if (calificacion >= 90 && calificacion <= 100) {
+        cout << "Calificacion: A\n";
+    } else if (calificacion >= 80 && calificacion <= 89) {
+        cout << "Calificacion: B\n";
+    } else if (calificacion >= 70 && calificacion <= 79) {
+        cout << "Calificacion: C\n";
+    } else if (calificacion >= 60 && calificacion <= 69) {
+        cout << "Calificacion: D\n";
+    } else if (calificacion >= 0 && calificacion <= 59) {
+        cout << "Calificacion: F\n";
+    } else {
+        cout << "Calificacion no valida.\n";
     }
 }
