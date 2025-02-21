@@ -10,6 +10,7 @@ void ejercicio6();
 void ejercicio7();
 void ejercicio8();
 void ejercicio9();
+void ejercicio10();
 
 int main() {
     int opcion;
@@ -25,6 +26,7 @@ int main() {
         cout << "7. Verificar si un anio es un anio de nacimiento valido.\n";
         cout << "8. Determinar si un numero es multiplo de 5 y de 7.\n";
         cout << "9. Determinar la calificacion de un estudiante.\n";
+        cout << "10. Calcular el precio despues de un descuento.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -56,6 +58,9 @@ int main() {
             break;
             case 9:
                 ejercicio9();
+            break;
+            case 10:
+                ejercicio10();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -205,4 +210,15 @@ void ejercicio9() {
     } else {
         cout << "Calificacion no valida.\n";
     }
+}
+
+void ejercicio10() {
+    double precio, descuento;
+    cout << "\nIngrese el precio del articulo: ";
+    cin >> precio;
+    cout << "Ingrese el porcentaje de descuento: ";
+    cin >> descuento;
+
+    double precioFinal = precio - (precio * descuento / 100);
+    cout << "El precio final despues del descuento es: " << precioFinal << "\n";
 }
