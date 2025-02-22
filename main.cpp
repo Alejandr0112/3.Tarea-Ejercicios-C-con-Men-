@@ -19,6 +19,7 @@ void ejercicio15();
 void ejercicio16();
 void ejercicio17();
 void ejercicio18();
+void ejercicio19();
 
 int main() {
     int opcion;
@@ -43,6 +44,7 @@ int main() {
         cout << "16. Imprimir todos los numeros pares hasta un numero ingresado.\n";
         cout << "17. Calcular la media de una serie de numeros ingresados.\n";
         cout << "18. Ingresar numeros hasta que el numero ingresado sea igual a 0.\n";
+        cout << "19. Imprimir los primeros 10 numeros naturales y su respectivo cuadrado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -101,6 +103,9 @@ int main() {
             break;
             case 18:
                 ejercicio18();
+            break;
+            case 19:
+                ejercicio19();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -373,4 +378,13 @@ void ejercicio18() {
     }
 
     cout << "Se ingreso el numero 0. Programa detenido.\n";
+}
+
+void ejercicio19() {
+    int i = 1;
+    cout << "\nNumero\tCuadrado\n";
+    while (i <= 10) {
+        cout << i << "\t" << i * i << "\n";
+        i++;
+    }
 }
