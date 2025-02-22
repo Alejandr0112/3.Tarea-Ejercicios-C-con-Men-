@@ -26,6 +26,7 @@ void ejercicio22();
 void ejercicio23();
 void ejercicio24();
 void ejercicio25();
+void ejercicio26();
 
 int main() {
     int opcion;
@@ -57,6 +58,7 @@ int main() {
         cout << "23. Calcular la suma de todos los numeros pares desde 1 hasta un numero ingresado.\n";
         cout << "24. Calcular el factorial de un numero ingresado.\n";
         cout << "25. Imprimir la serie de numeros primos del 1 al 50.\n";
+        cout << "26. Imprimir la serie: 1, 3, 6, 10, 15, ..., n.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -136,6 +138,9 @@ int main() {
             break;
             case 25:
                 ejercicio25();
+            break;
+            case 26:
+                ejercicio26();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -486,6 +491,19 @@ void ejercicio25() {
         if (esPrimo) {
             cout << i << " ";
         }
+    }
+    cout << "\n";
+}
+
+void ejercicio26() {
+    int n, suma = 0;
+    cout << "\nIngrese un numero: ";
+    cin >> n;
+
+    cout << "Serie: ";
+    for (int i = 1; i <= n; i++) {
+        suma += i;
+        cout << suma << " ";
     }
     cout << "\n";
 }
