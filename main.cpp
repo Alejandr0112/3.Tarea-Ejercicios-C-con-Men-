@@ -18,6 +18,7 @@ void ejercicio14();
 void ejercicio15();
 void ejercicio16();
 void ejercicio17();
+void ejercicio18();
 
 int main() {
     int opcion;
@@ -41,6 +42,7 @@ int main() {
         cout << "15. Ingresar numeros hasta que la suma sea mayor a 100.\n";
         cout << "16. Imprimir todos los numeros pares hasta un numero ingresado.\n";
         cout << "17. Calcular la media de una serie de numeros ingresados.\n";
+        cout << "18. Ingresar numeros hasta que el numero ingresado sea igual a 0.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -96,6 +98,9 @@ int main() {
             break;
             case 17:
                 ejercicio17();
+            break;
+            case 18:
+                ejercicio18();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -354,4 +359,18 @@ void ejercicio17() {
     } else {
         cout << "No se ingresaron numeros.\n";
     }
+}
+
+void ejercicio18() {
+    int numero;
+    cout << "\nIngrese numeros (ingrese 0 para detener):\n";
+
+    while (true) {
+        cin >> numero;
+        if (numero == 0) {
+            break;
+        }
+    }
+
+    cout << "Se ingreso el numero 0. Programa detenido.\n";
 }
