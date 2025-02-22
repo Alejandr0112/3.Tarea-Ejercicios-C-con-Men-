@@ -20,6 +20,7 @@ void ejercicio16();
 void ejercicio17();
 void ejercicio18();
 void ejercicio19();
+void ejercicio20();
 
 int main() {
     int opcion;
@@ -45,6 +46,7 @@ int main() {
         cout << "17. Calcular la media de una serie de numeros ingresados.\n";
         cout << "18. Ingresar numeros hasta que el numero ingresado sea igual a 0.\n";
         cout << "19. Imprimir los primeros 10 numeros naturales y su respectivo cuadrado.\n";
+        cout << "20. Calcular el producto de los primeros 10 numeros naturales.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -106,6 +108,9 @@ int main() {
             break;
             case 19:
                 ejercicio19();
+            break;
+            case 20:
+                ejercicio20();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -387,4 +392,13 @@ void ejercicio19() {
         cout << i << "\t" << i * i << "\n";
         i++;
     }
+}
+
+void ejercicio20() {
+    int producto = 1, i = 1;
+    while (i <= 10) {
+        producto *= i;
+        i++;
+    }
+    cout << "\nEl producto de los primeros 10 numeros naturales es: " << producto << "\n";
 }
