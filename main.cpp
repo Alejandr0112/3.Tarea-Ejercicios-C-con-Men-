@@ -30,6 +30,7 @@ void ejercicio26();
 void ejercicio27();
 void ejercicio28();
 void ejercicio29();
+void ejercicio30();
 
 int main() {
     int opcion;
@@ -65,6 +66,7 @@ int main() {
         cout << "27. Imprimir los primeros 10 terminos de la serie de Fibonacci.\n";
         cout << "28. Calcular e imprimir la suma de los primeros 100 numeros naturales.\n";
         cout << "29. Imprimir todos los divisores de un numero ingresado.\n";
+        cout << "30. Imprimir los primeros 10 numeros primos.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -156,6 +158,9 @@ int main() {
             break;
             case 29:
                 ejercicio29();
+            break;
+            case 30:
+                ejercicio30();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -553,6 +558,26 @@ void ejercicio29() {
         if (numero % i == 0) {
             cout << i << " ";
         }
+    }
+    cout << "\n";
+}
+
+void ejercicio30() {
+    int contador = 0, numero = 2;
+    cout << "\nPrimeros 10 numeros primos:\n";
+    while (contador < 10) {
+        bool esPrimo = true;
+        for (int i = 2; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+        if (esPrimo) {
+            cout << numero << " ";
+            contador++;
+        }
+        numero++;
     }
     cout << "\n";
 }
