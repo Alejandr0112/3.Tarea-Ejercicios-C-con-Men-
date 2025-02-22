@@ -24,6 +24,7 @@ void ejercicio20();
 void ejercicio21();
 void ejercicio22();
 void ejercicio23();
+void ejercicio24();
 
 int main() {
     int opcion;
@@ -53,6 +54,7 @@ int main() {
         cout << "21. Imprimir los numeros pares del 2 al 20.\n";
         cout << "22. Mostrar la tabla de multiplicar de un numero ingresado.\n";
         cout << "23. Calcular la suma de todos los numeros pares desde 1 hasta un numero ingresado.\n";
+        cout << "24. Calcular el factorial de un numero ingresado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -126,6 +128,9 @@ int main() {
             break;
             case 23:
                 ejercicio23();
+            break;
+            case 24:
+                ejercicio24();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -449,4 +454,16 @@ void ejercicio23() {
     }
 
     cout << "La suma de los numeros pares desde 1 hasta " << n << " es: " << suma << "\n";
+}
+
+void ejercicio24() {
+    int numero, factorial = 1;
+    cout << "\nIngrese un numero: ";
+    cin >> numero;
+
+    for (int i = 1; i <= numero; i++) {
+        factorial *= i;
+    }
+
+    cout << "El factorial de " << numero << " es: " << factorial << "\n";
 }
