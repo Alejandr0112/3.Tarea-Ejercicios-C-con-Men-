@@ -17,6 +17,7 @@ void ejercicio13();
 void ejercicio14();
 void ejercicio15();
 void ejercicio16();
+void ejercicio17();
 
 int main() {
     int opcion;
@@ -39,6 +40,7 @@ int main() {
         cout << "14. Generar la secuencia de Fibonacci hasta un numero ingresado.\n";
         cout << "15. Ingresar numeros hasta que la suma sea mayor a 100.\n";
         cout << "16. Imprimir todos los numeros pares hasta un numero ingresado.\n";
+        cout << "17. Calcular la media de una serie de numeros ingresados.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -91,6 +93,9 @@ int main() {
             break;
             case 16:
                 ejercicio16();
+            break;
+            case 17:
+                ejercicio17();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -328,4 +333,25 @@ void ejercicio16() {
         i++;
     }
     cout << "\n";
+}
+
+void ejercicio17() {
+    int numero, contador = 0, suma = 0;
+    cout << "\nIngrese numeros (ingrese 0 para detener):\n";
+
+    while (true) {
+        cin >> numero;
+        if (numero == 0) {
+            break;
+        }
+        suma += numero;
+        contador++;
+    }
+
+    if (contador > 0) {
+        double media = static_cast<double>(suma) / contador;
+        cout << "La media de los numeros ingresados es: " << media << "\n";
+    } else {
+        cout << "No se ingresaron numeros.\n";
+    }
 }
