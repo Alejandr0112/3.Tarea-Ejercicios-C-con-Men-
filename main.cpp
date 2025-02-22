@@ -23,6 +23,7 @@ void ejercicio19();
 void ejercicio20();
 void ejercicio21();
 void ejercicio22();
+void ejercicio23();
 
 int main() {
     int opcion;
@@ -51,6 +52,7 @@ int main() {
         cout << "20. Calcular el producto de los primeros 10 numeros naturales.\n";
         cout << "21. Imprimir los numeros pares del 2 al 20.\n";
         cout << "22. Mostrar la tabla de multiplicar de un numero ingresado.\n";
+        cout << "23. Calcular la suma de todos los numeros pares desde 1 hasta un numero ingresado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -121,6 +123,9 @@ int main() {
             break;
             case 22:
                 ejercicio22();
+            break;
+            case 23:
+                ejercicio23();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -430,4 +435,18 @@ void ejercicio22() {
     for (int i = 1; i <= 10; i++) {
         cout << numero << " x " << i << " = " << numero * i << "\n";
     }
+}
+
+void ejercicio23() {
+    int n, suma = 0;
+    cout << "\nIngrese un numero entero positivo: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            suma += i;
+        }
+    }
+
+    cout << "La suma de los numeros pares desde 1 hasta " << n << " es: " << suma << "\n";
 }
