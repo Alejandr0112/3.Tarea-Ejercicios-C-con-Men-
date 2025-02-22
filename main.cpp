@@ -29,6 +29,7 @@ void ejercicio25();
 void ejercicio26();
 void ejercicio27();
 void ejercicio28();
+void ejercicio29();
 
 int main() {
     int opcion;
@@ -63,6 +64,7 @@ int main() {
         cout << "26. Imprimir la serie: 1, 3, 6, 10, 15, ..., n.\n";
         cout << "27. Imprimir los primeros 10 terminos de la serie de Fibonacci.\n";
         cout << "28. Calcular e imprimir la suma de los primeros 100 numeros naturales.\n";
+        cout << "29. Imprimir todos los divisores de un numero ingresado.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -151,6 +153,9 @@ int main() {
             break;
             case 28:
                 ejercicio28();
+            break;
+            case 29:
+                ejercicio29();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -536,4 +541,18 @@ void ejercicio28() {
         suma += i;
     }
     cout << "\nLa suma de los primeros 100 numeros naturales es: " << suma << "\n";
+}
+
+void ejercicio29() {
+    int numero;
+    cout << "\nIngrese un numero: ";
+    cin >> numero;
+
+    cout << "Divisores de " << numero << ": ";
+    for (int i = 1; i <= numero; i++) {
+        if (numero % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << "\n";
 }
