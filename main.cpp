@@ -21,6 +21,7 @@ void ejercicio17();
 void ejercicio18();
 void ejercicio19();
 void ejercicio20();
+void ejercicio21();
 
 int main() {
     int opcion;
@@ -47,6 +48,7 @@ int main() {
         cout << "18. Ingresar numeros hasta que el numero ingresado sea igual a 0.\n";
         cout << "19. Imprimir los primeros 10 numeros naturales y su respectivo cuadrado.\n";
         cout << "20. Calcular el producto de los primeros 10 numeros naturales.\n";
+        cout << "21. Imprimir los numeros pares del 2 al 20.\n";
         cout << "0. Salir\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
@@ -111,6 +113,9 @@ int main() {
             break;
             case 20:
                 ejercicio20();
+            break;
+            case 21:
+                ejercicio21();
             break;
             case 0:
                 cout << "Saliendo del programa.\n";
@@ -401,4 +406,12 @@ void ejercicio20() {
         i++;
     }
     cout << "\nEl producto de los primeros 10 numeros naturales es: " << producto << "\n";
+}
+
+void ejercicio21() {
+    cout << "\nNumeros pares del 2 al 20:\n";
+    for (int i = 2; i <= 20; i += 2) {
+        cout << i << " ";
+    }
+    cout << "\n";
 }
